@@ -4,7 +4,6 @@ import Text from './CustomText';
 import { Icon, SearchBar } from 'react-native-elements';
 import {
   widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import { useThemeAwareObject } from '../Theme/ThemeAwareObjectHook';
 
@@ -52,7 +51,6 @@ const CustomHeader = (props) => {
   );
 };
 
-
 const createStyle = (theme) => {
   return StyleSheet.create({
     topView: {
@@ -64,23 +62,11 @@ const createStyle = (theme) => {
       alignSelf: 'center',
       backgroundColor: theme.color.primaryColor,
     },
-    innerTopView: {
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      alignItems: 'center',
-      width: wp(30),
-    },
-    redViewShift: {
-      marginLeft: wp(3),
-    },
     heading: {
       color: theme.color.white,
       fontFamily: theme.family.medium,
       fontSize: theme.size.statusSize,
       fontWeight: '600',
-    },
-    rightIcon: {
-      alignSelf: 'flex-end',
     },
     searchBarContainerStyle: {
       backgroundColor: 'transparent',
@@ -103,10 +89,6 @@ const createStyle = (theme) => {
       paddingLeft: wp(2),
     },
     searchBarRightIconContainerStyle: {},
-    horizontalDot: {
-      position: 'absolute',
-      left: wp(70),
-    },
   });
 };
 
