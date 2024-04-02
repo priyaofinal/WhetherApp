@@ -74,7 +74,7 @@ const Home = ({navigation}) => {
                 <Text style={styles.text}>Place: {weatherData.name}</Text>
                 <Text style={styles.text}>
                   Temperature:{' '}
-                  {convertKelvinToCelsius(weatherData.main.temp).toFixed(2)} °C
+                  {Math.ceil(convertKelvinToCelsius(weatherData.main.temp))}
                 </Text>
                 <Text style={styles.text}>
                   Humidity: {weatherData.main.humidity}%
